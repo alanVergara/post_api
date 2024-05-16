@@ -14,7 +14,13 @@ class PostsController < ApplicationController
     end
   end
 
+  # DELETE, <host>/posts/{id}
   def destroy
+    @post = Post.find(params[:id])
+    if @post
+      @post.destroy
+      render json: @post, status: :ok
+    end
   end
 
   private
