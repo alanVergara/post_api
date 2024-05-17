@@ -1,4 +1,4 @@
 class Post < ApplicationRecord
-    # title validation, not emty
-    validates :title, presence: true
+    # name validation, not emty
+    validates :name, presence: true
 end
